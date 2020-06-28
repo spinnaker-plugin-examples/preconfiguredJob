@@ -1,0 +1,33 @@
+label: CustomPreconfiguredJob
+# type should be some unique value.
+type: customPreconfigRunJob
+description: 'Run a example command in container.'
+cloudProvider: kubernetes
+account: spinnaker
+credentials: spinnaker
+waitForCompletion: true
+parameters:
+  - name: Counter Limit
+    label: Counter Limit
+    description: The maximun value to iterate
+    mapping: manifest.spec.template.spec.containers[0].env[0].value
+    defaultValue: 20
+manifest:
+  apiVersion: batch/v1
+  kind: Job
+  metadata:
+    name: run-job
+    namespace: spinnaker
+  spec:
+    backoffLimit: 0
+    template:
+      spec:
+        restartPolicy: Never
+        containers:
+          - name: counter
+            image: centos:7
+            command: ["/bin/sh"]
+            args: ["-c", "for i in $(seq 1 $(COUNTER_LIMIT)) ; do echo $i ; done"]
+            env:
+              - name: COUNTER_LIMIT
+                value: fakevalue
