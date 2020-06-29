@@ -3,8 +3,7 @@ label: CustomPreconfiguredJob
 type: customPreconfigRunJob
 description: 'Run a example command in container.'
 cloudProvider: kubernetes
-account: spinnaker
-credentials: spinnaker
+account: kubernetes
 waitForCompletion: true
 parameters:
   - name: Counter Limit

@@ -26,9 +26,6 @@ class PreconfiguredStage(val pluginSdks: PluginSdks, val configuration: PluginCo
         if (!configuration.account.isNullOrEmpty()) {
             jobProperties.account = configuration.account
         }
-        if (!configuration.credentials.isNullOrEmpty()) {
-            jobProperties.credentials = configuration.credentials
-        }
         if (!configuration.namespace.isNullOrEmpty()) {
             jobProperties.manifest.metadata.namespace = configuration.namespace
         }
