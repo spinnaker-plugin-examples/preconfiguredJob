@@ -22,10 +22,9 @@ spinnaker:
           armory.preconfiguredJobStage:
             enabled: true
             config:
-              account:
-              credentials:
-              namespace:
-              application:
+              account: <ACCOUNT-TO-USE>
+              namespace: <KUBERNETES-NAMESPACE>
+              application: <SPINNAKER-APPLICATION>
 ```
 
 Or use the [examplePluginRepository](https://github.com/spinnaker-plugin-examples/examplePluginRepository) to avoid copying the plugin `.zip` artifact.
