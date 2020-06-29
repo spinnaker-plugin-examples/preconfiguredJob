@@ -19,7 +19,7 @@ repositories {
 }
 
 spinnakerBundle {
-  pluginId = "Armory.PreconfigureJob"
+  pluginId = "Armory.PreconfiguredJob"
   description = "A plugin that provides stage as a pre-configured job."
   provider = "https://github.com/spinnaker-plugin-examples"
   version = rootProject.version
@@ -28,7 +28,7 @@ spinnakerBundle {
 version = normalizedVersion()
 
 subprojects {
-  group = "io.armory.plugin"
+  group = "io.armory.plugin.preconfigured"
   version = rootProject.version
 }
 

@@ -8,7 +8,7 @@ import org.pf4j.Plugin
 import org.pf4j.PluginWrapper
 
 
-class PulumiPlugin(wrapper: PluginWrapper): Plugin(wrapper) {
+class PreconfiguredPlugin(wrapper: PluginWrapper): Plugin(wrapper) {
 
     override fun start() {
         System.out.println("PreconfiguredPlugin.start()")
@@ -20,7 +20,7 @@ class PulumiPlugin(wrapper: PluginWrapper): Plugin(wrapper) {
 }
 
 @Extension
-class PulumiPreConfiguredStage(val pluginSdks: PluginSdks, val configuration: PluginConfig) : PreconfiguredJobConfigurationProvider {
+class PreconfiguredStage(val pluginSdks: PluginSdks, val configuration: PluginConfig) : PreconfiguredJobConfigurationProvider {
     override fun getJobConfigurations(): List<KubernetesPreconfiguredJobProperties> {
         val jobProperties = pluginSdks.yamlResourceLoader().loadResource("io/armory/plugin/preconfigured/job.yaml", KubernetesPreconfiguredJobProperties::class.java)
         if (!configuration.account.isNullOrEmpty()) {
