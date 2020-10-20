@@ -1,6 +1,6 @@
-![CI](https://github.com/spinnaker-plugin-examples/pf4jStagePlugin/workflows/CI/badge.svg)
-![Latest Kork](https://github.com/spinnaker-plugin-examples/pf4jStagePlugin/workflows/Latest%20Kork/badge.svg?branch=master)
-![Latest Orca](https://github.com/spinnaker-plugin-examples/pf4jStagePlugin/workflows/Latest%20Orca/badge.svg?branch=master)
+![CI](https://github.com/spinnaker-plugin-examples/preconfiguredJob/workflows/CI/badge.svg)
+![Latest Kork](https://github.com/spinnaker-plugin-examples/preconfiguredJob/workflows/Latest%20Kork/badge.svg?branch=master)
+![Latest Orca](https://github.com/spinnaker-plugin-examples/preconfiguredJob/workflows/Latest%20Orca/badge.svg?branch=master)
 
 This plugin demonstrate how to setup a preconfigured job on Kubernetes.
 
